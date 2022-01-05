@@ -76,7 +76,7 @@ body {
     left: 4rem;
 }
 
-.header .contact li {
+.header .contact li:not(:last-child) {
     margin-right: 1rem;
 }
 
@@ -96,4 +96,137 @@ body {
 .main {
     margin-left: 40rem;
     padding: 2rem;
+}
+
+.main .contents {
+    width: 100%;
+}
+
+.main .contents::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main .contents article {
+    width: 20%;
+    padding: 1.2rem;
+    float: left;
+}
+
+.main .contents article div {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 1.4rem;
+    border-radius: 4px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main .contents article div img {
+    width: 100%;
+}
+
+.main .contents article div h2 {
+    font: bold 1.1rem/1 'orbitron';
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+.main .contents article div p {
+    font: 1rem/1.2 'arial';
+    color: #777;
+    margin-bottom: 1.5rem;
+}
+
+/* Media query*/
+@media screen and (max-width: 1600px) {
+    .header {
+        width: 35rem;
+    }
+
+    .header .contact {
+        left: 3rem;
+    }
+
+    .main {
+        margin-left: 35rem;
+    }
+    .main .contents article {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+        width: 100%;
+        height: 8rem;
+        position: relative;
+    }
+
+    .header .title {
+        transform: translateY(-50%);
+    }
+
+    .header .title h1 {
+        font: bold 2.4rem/1 'orbitron';
+    }
+
+    .header .title h1::after,
+    .header .title span {
+        display: none;
+    }
+
+    .header .contact {
+        left: 87%;
+        bottom: 2.5rem;
+    }
+
+    .header .contact li {
+        margin-right: 2rem;
+    }
+
+    .header .contact li a span {
+        display: none;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    .main .contents article {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .header .contact {
+        left: 85%;
+    }
+
+    .main .contents article {
+        width: 33.333%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .header .contact {
+        left: 80%;
+    }
+
+    .main .contents article {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .header .contact {
+        display: none;
+    }
+
+    .main .contents article {
+        width: 100%;
+    }
 }
