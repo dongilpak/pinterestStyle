@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+}
+
+body {
+    background: #efefef;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    width: 40rem;
+    height: 100%;
+    background: linear-gradient(45deg, aqua, royalblue);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.header .title {
+    position: absolute;
+    top: 50%;
+    left: 5rem;
+    transform: translateY(-120%);
+    color: #fff;
+}
+
+.header .title h1 {
+    font: bold 5rem/1 'orbitron';
+    letter-spacing: 1px;
+}
+
+.header .title h1::after {
+    content: '';
+    display: block;
+    width: 15rem;
+    height: 2px;
+    background: #fff;
+    margin: 2rem 0;
+}
+
+.header .title span {
+    font: 1.4rem/1 'orbitron';
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.header .contact {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    bottom: 10rem;
+    left: 4rem;
+}
+
+.header .contact li {
+    margin-right: 1rem;
+}
+
+.header .contact li a {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.header .contact li a span {
+    display: inline-block;
+    font-weight: bold;
+    opacity: 0.7;
+    transform: scale(0.7) translateX(-1rem);
+}
+
+/* Main */
+.main {
+    margin-left: 40rem;
+    padding: 2rem;
+}
